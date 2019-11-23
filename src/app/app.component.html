@@ -1,21 +1,28 @@
 <header>
-   <img src="../assets/banderas.jpg" alt="circulo cromatico" />
-   <div>
-     <h1>Diversion con Banderas</h1>
-   
-   </div>
- </header>
- <hr />
- 
- <section>
-   <h3>
-       Haz click en la bandera de: <strong>{{ ganador }}</strong>
-     </h3>
+  <img src="../assets/banderas.jpg" alt="circulo cromatico" />
+  <h1>Diversion con Banderas</h1>
+</header>
+
+<main>
+
+<section>
+  <h2>
+    Haz click en la bandera de: 
+  </h2>
+  <h3>
+    <strong>{{ ganador }}</strong>
+  </h3>
+
+  <div class="cont-banderas">
+    <app-bandera
+      *ngFor="let unaBandera of banderas"
+      [infoBandera]="unaBandera"
+      [fin]="fin"
+      (eventoClick)="manejarClick($event)"
+    ></app-bandera>
+  </div>
+</section>
 
 
 
-
-
-<div class="cont-banderas" >
-   <app-bandera *ngFor="let unaBandera of banderas" [infoBandera]="unaBandera" [fin]="fin" (eventoClick)="manejarClick($event)"></app-bandera>
-</div>
+</main>

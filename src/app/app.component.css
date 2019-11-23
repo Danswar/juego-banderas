@@ -1,6 +1,6 @@
 .cont-banderas{
-  width: 60%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 2em auto;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -8,109 +8,91 @@
 }
 app-bandera{
     width: 20%;
-    min-width: 200px;
     margin: .2em;
+
+    background: rgba(167, 163, 163, 0.2);
+    padding: .5em;
+    border: rgba(55,55,55,.5) solid 1px;
+    border-radius: 8px;
 }
 
+
+
+@media(max-width: 800px){
+
+  .cont-banderas{
+    width: 90%;
+  }
+
+
+  app-bandera{
+    width: 120px;
+    height: 120px;
+  }
+  
+
+}
+
+@media(max-width: 400px){
+
+  .cont-banderas{
+    width: 98%;
+  }
+
+
+  app-bandera{
+    width: 80px;
+    height: 80px;
+  }
+}
 
 
 
 
 
 header{
-  width: 85%;
-  height: 18vh;
-  margin: 1em auto 0 auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-bottom: 1em;
+  padding: .5rem 5%;
+  background: cornflowerblue;
   
 }
 header img{
-  width: 8%;
-  margin-right: 1em;
+  width: 25%;
+  max-width: 80px;
+  min-width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 h1{
-  font-size: 42px;
+  margin-right: 3%;
+  font-size: 1.5em;
   font-style: italic;
-  
-}
-h2{
-  margin-top: .5em;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 500;
-}
-h3{
-  margin-bottom: 1em;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 300;
-  font-style: italic;
-}
-h4{
-  margin-top: .5em;
-  font-size: 24px;
-  font-weight: 500;
-}
-strong{
-  font-style: normal;
-  font-weight: bolder !important;
-}
-hr{
-  width: 95%;
-  margin: 0 auto;
-}
-p{
-  font-size: 42px;
-  font-style: italic;
-  font-weight: bolder;
-  text-align: center;
+  color: white;
 }
 section{
-  margin: 3em auto 0 auto;
-  margin-top: 3em;
-}
-.cont-colores{
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: initials;
-}
-
-.controles{
-  margin: 4em auto;
-  display: flex;
-  justify-content: space-around;
-  width: 70%;
-  padding: .3em;
-  border-radius: 10px;
-  border: rgba(   200, 200, 200, .9) solid 1px;
-  
-}
-
-.controles div{
-  width: 8em;
-  padding: .3em;
+  padding: 1em 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: center;
 }
-  
-.controles img{
-  width: 5em;
-}
-
-.controles:nth-child(0){
-  border-right:  rgba(   200, 200, 200, .9) solid 1px ;
-}
-
-footer{
-  width: 100%;
-  height: 30px;
-  background: rgb(209, 209, 209);
-  position: absolute;
-  bottom: 0;
+h2, h3{
   text-align: center;
-  font-size: 18px;
-  font-style: italic;
 }
+h2{
+  
+  font-weight: 500;
+  font-style: oblique;
+}
+h3{
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+
+
+
+
