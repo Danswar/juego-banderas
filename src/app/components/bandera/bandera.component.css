@@ -1,0 +1,8 @@
+div{
+    background: rgba(220, 220, 220 , .4);
+    padding: .5em;
+    border: rgba(55,55,55,.5) solid 1px;
+}
+img{
+    width: 100%;
+}
