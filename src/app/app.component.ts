@@ -8,14 +8,24 @@ import { Component, OnInit } from "@angular/core";
 export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.iniciar();
+    this.score = 0;
   }
+
+  score: number;
 
   fin=false;
   dificultad = 6;
   banderas = [];
   ganador : String;
+  puntos: number;
+
   
   iniciar() {
+    this.fin=false;
+    this.dificultad = 6;
+    this.banderas = [];
+    this.puntos = 7;
+
     for (let i = 0; i < this.dificultad; i++) {
       let countriRandom = this.getRandomCountries();
       this.banderas.push({
@@ -23,12 +33,8 @@ export class AppComponent implements OnInit {
         url: this.imagenUrl(countriRandom)
       });
     }
-
     let indiceRandom = Math.trunc(Math.random()*(this.dificultad)) ;
     this.ganador = this.banderas[indiceRandom].nombre
-    
-
-
   }
 
   imagenUrl(countrie) {
@@ -45,9 +51,10 @@ export class AppComponent implements OnInit {
 
 
   manejarClick(event){
+    this.puntos--;
     if(event==this.ganador){
-      alert("Ganaste")
       this.fin=true;
+      this.score += this.puntos;
     }
   }
 

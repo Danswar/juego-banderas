@@ -6,6 +6,7 @@
 <main>
 
 <section>
+  <h4>Score: {{score}}</h4>
   <h2>
     Haz click en la bandera de: 
   </h2>
@@ -20,6 +21,12 @@
       [fin]="fin"
       (eventoClick)="manejarClick($event)"
     ></app-bandera>
+  </div>
+
+
+  <div class="control" (click)="iniciar()" *ngIf="fin">
+    <img src="../assets/next.png" alt="siguiente">
+    <h2>Siguiente</h2>
   </div>
 </section>
 

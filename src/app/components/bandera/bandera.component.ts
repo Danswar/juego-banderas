@@ -16,6 +16,7 @@ export class BanderaComponent implements OnInit {
 
 
   manejarClick(){
+    if(this.fin){return;}
     this.eventoClick.emit(this.infoBandera.nombre);
     this.mostrarRespuesta =true;
   }
